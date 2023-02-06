@@ -9,6 +9,7 @@ pipeline {
             }
             steps {
                 echo "Starting Build Stage"
+                echo "Log Level: $LOG_LEVEL"
                 git branch: 'main', url: 'https://github.com/wingdagger/python-sample.git'
                 echo "Downloaded code from Github"
                 stash(name: 'src', includes: '*') 
